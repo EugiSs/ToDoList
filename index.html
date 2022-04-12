@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="shortcut icon" href="favicon-ico.svg" type="image/x-icon">
+	<title>ToDoList</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>ToDo.js</h1>
+	</header>
+
+	<main>
+
+		<ul class="todo-list">
+			<li class="todo-item">
+				<input class="checkbox" type="checkbox">
+				<label for="checkbox" class="title">Создать задачу</label>
+				<input class="textfield" type="text">
+				<button class="edit">Изменить</button>
+				<button class="delete">Удалить</button>
+			</li>
+		</ul>
+
+		<form id="todo-form">
+			<input id="add-input" type="text">
+			<button id="add-button" type="submit">Добавить</button>
+		</form>
+
+	</main>
+
+	<script src="./main.js"></script>
+</body>
+</html>

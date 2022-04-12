@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Grape Nuts', cursive;
+  font-size: 20px;
+  background-color: #CDC5BF;
+  color: #757575;
+}
+ul, ol, li {
+	list-style: none;
+}
+input, button, textarea {
+	font-family: inherit;
+}
+button {
+	cursor: pointer;
+	background: 0 0;
+	border: none;
+	color: inherit;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 5px;
+	min-width: 60px;
+	height: 36px;
+	padding: 0 7px;
+	overflow: hidden;
+	outline: none;
+	text-align: center;
+	position: relative;
+}
+button:hover {
+	background-color: rgba(158, 158, 158, 0.3);
+}
+button:active {
+	background-color: rgba(158, 158, 158, 0.5);
+}
+button.icon {
+	border-radius: 50%;
+	font-size: 24px;
+	height: 32px;
+	min-width: 32px;
+	overflow: hidden;
+}
+button .material-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	line-height: 24px;
+	transform: translate(-12px, -12px);
+	vertical-align: middle;
+}
+input {
+	padding: 0.3em;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	outline: none;
+}
+main {
+	background-color: #fafafa;
+	width: 700px;
+	margin: 30px auto;
+	border-radius: 5px;
+  overflow: hidden;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+header {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+}
+
+/* .todo-item */
+.todo-item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 1em;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	transition: all 0.3s ease 0s;
+}
+.todo-item .checkbox {
+	margin-right: .5rem;
+}
+.todo-item .title {
+	margin-right: 0.5rem;
+	flex: 1 1 auto;
+	max-width: 100%;
+	flex-wrap: wrap;
+}
+.todo-item .textfield {
+	margin-right: 0.3rem;
+	flex: 1 1 auto;
+	display: none;
+}
+.todo-item button {
+	opacity: 0;
+	transition: all .2s;
+	margin-bottom: -3px;
+}
+.todo-item:hover button:not(.checkbox) {
+	opacity: 1;
+}
+
+/* item completed */
+.todo-item.completed * {
+	color: lightgray;
+}
+.todo-item.completed .title {
+	text-decoration: line-through;
+}
+
+/* item editing */
+.todo-item.editing .title {
+	display: none;
+}
+.todo-item.editing .textfield {
+	display: block;
+}
+
+/* .todo-form */
+#todo-form {
+	display: flex;
+	background-color: #f1f1f148;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	padding: 1rem;
+}
+#todo-form input {
+	flex: 1 1 auto;
+	outline: none;
+	transition: all .2s;
+	margin-right: 0.3rem;
+}
+#todo-form input:focus {
+	border: 1px solid #8B8682;
+}
